@@ -1,0 +1,26 @@
+.orderFormTitle {
+    margin-bottom: 45px;
+    font-family: 'Manrope';
+    font-style: normal;
+    font-weight: 800;
+    font-size: 45px;
+    line-height: 61px;
+    color: #322C2A;
+}
+
+.orderFormContainer {
+    background: rgba(196, 196, 196, 0.105);
+    border: 3px solid #FCF9F7;
+    backdrop-filter: blur(10.6647px);
+    border-radius: 25px;
+    padding: 45px;
+    max-width: 520px;
+    width: 100%;
+}
+
+.formSwitch {
+    background: #EAE9EA;
+    border-radius: 25px;
+    display: flex;
+}
+

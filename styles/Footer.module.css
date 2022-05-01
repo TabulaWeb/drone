@@ -1,0 +1,95 @@
+.footer {
+    padding: 45px 0;
+    display: flex;
+    justify-content: space-between;
+}
+
+.footerSearchInput {
+    max-width: 340px;
+    width: 100%;
+    background: #FCF9F7;
+    border-radius: 25px;
+    padding: 10px 25px 10px 50px; 
+
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 22px;
+    color: #787474;
+
+    background-image: url('../public/search.svg');
+    background-repeat: no-repeat;
+    background-position: 17px center;
+    outline: none;
+    border: 0;
+}
+
+.footerSearch {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.footerLogoText {
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 22px;
+    color: #322C2A;
+    margin-top: 10px;
+}
+
+.footerDownloadTitle {
+    margin-bottom: 20px;
+}
+
+.footerDownloadLinks {
+    display: flex;
+    flex-direction: column;
+    gap: 20px 0;
+}
+
+.footerInfo {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.footerInfoPhone {
+    display: flex;
+    flex-direction: column;
+    gap: 15px 0;
+}
+
+.footerInfoPhoneText {
+    font-family: 'Manrope', sans-serif;
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 27px;
+    color: #322C2A;
+}
+
+.footerInfoPhoneLink {
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 22px;
+    color: #224757;
+}
+
+.footerInfoSocialText {
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 22px;
+    color: #322C2A;
+    margin-bottom: 15px;
+}
+
+.footerInfoSocialLink {
+    display: flex;
+    flex-direction: row;
+    gap: 0 25px;
+}
+
+.socialLink {
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 22px;
+}
