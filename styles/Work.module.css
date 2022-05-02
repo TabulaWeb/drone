@@ -1,0 +1,45 @@
+.workTitle {
+    font-weight: 800;
+    font-size: 45px;
+    line-height: 61px;
+    margin-bottom: 45px;
+}
+
+.workCards {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    gap: 0 20px;
+}
+
+.workCard {
+    padding: 20px 25px;
+    background: #FCF9F7;
+    box-shadow: 0px 4px 8px 3px rgba(50, 44, 42, 0.1);
+    border-radius: 25px;
+}
+
+.workCardImage {
+    padding: 25px;
+    border: 3px solid #C0CEDA;
+    border-radius: 50%;
+    width: fit-content;
+    display: flex;
+    margin: 0 auto;
+    margin-bottom: 25px;
+}
+
+.workCardTitle {
+    font-family: 'Manrope';
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 27px;
+    color: #224757;
+    margin-bottom: 15px;
+}
+
+.workCardDescription {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 22px;
+    color: #322C2A;
+}
