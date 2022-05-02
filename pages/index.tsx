@@ -4,10 +4,12 @@ import OrderForm from '../components/OrderForm';
 import Reviews from '../components/Reviews';
 import Work from '../components/Work';
 import Services from '../components/Services';
+import Main from '../components/Main'
 
 const Home: NextPage = () => {
   return (
     <>
+      <Main />
       <Services />
       <Work />
       <Reviews />

@@ -4,6 +4,7 @@ body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
     Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+  overflow-x: hidden;
 }
 
 footer {
@@ -188,4 +189,138 @@ a {
   position: absolute;
   right: 0;
   bottom: 65px;
+}
+
+/* Main */
+.main {
+  padding-top: 190px;
+  padding-bottom: 90px;
+  background-image: url('../public/backgroundMain.png');
+  background-repeat: no-repeat;
+  background-position-x: center;
+  background-size: cover;
+}
+
+.main-title {
+  padding-bottom: 135px;
+  position: relative;
+}
+
+.main-title h1 {
+  font-family: 'Manrope';
+  font-weight: 800;
+  font-size: 70px;
+  line-height: 70px;
+  text-align: center;
+  color: #FCF9F7;
+  margin-bottom: 25px;
+}
+
+.main-title p {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 22px;
+  text-align: center;
+  color: #322C2A;
+  max-width: 485px;
+  margin: 0 auto;
+}
+
+.main-title button {
+  background: #224757;
+  border-radius: 50px;
+  padding: 20px 50px;
+
+  color: #FCF9F7;
+  font-weight: 500;
+  font-family: 'Manrope';
+  font-size: 20px;
+  line-height: 27px;
+  border: none;
+  display: block;
+  margin: 0 auto;
+  margin-top: 45px;
+  cursor: pointer;
+  margin-bottom: 110px;
+}
+
+.droneAnimation {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 25px;
+}
+
+.buttonArrow {
+  margin: 0 auto;
+  cursor: pointer;
+  width: fit-content;
+}
+
+.main-why__title {
+  margin-bottom: 45px;
+  font-weight: 800;
+  font-size: 45px;
+  line-height: 61px;
+  color: #322C2A;
+}
+
+.main-why__content {
+  display: flex;
+  justify-content: space-between;
+}
+
+.cloudOne {
+  position: absolute;
+  bottom: 100px;
+  left: -60%;
+}
+
+.cloudTwo {
+  position: absolute;
+  top: 0;
+  right: -50%;
+}
+
+.main-why__text {
+  max-width: 344px;
+}
+
+.main-why__content-text {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.main-why__text p {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 22px;
+  color: #322C2A;
+  margin-bottom: 15px;
+}
+
+.main-why__text p:last-child {
+  margin-bottom: 0;
+}
+
+.main-why__content-stat {
+  max-width: 250px;
+  display: flex;
+  flex-direction: column;
+  gap: 50px 0;
+}
+
+.main-why__stat svg {
+  margin-bottom: 15px;
+}
+
+.main-why__stat p {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 22px;
+  color: #322C2A;
+}
+
+.main-why__video {
+  max-width: 250px;
 }
