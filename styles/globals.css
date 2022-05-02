@@ -156,6 +156,7 @@ a {
 
 .work {
   padding: 90px 0;
+  padding-bottom: 180px;
 }
 
 .servicesText {
@@ -327,4 +328,8 @@ a {
 .main-why{
   padding-top: 90px;
   padding-bottom: 90px;
+}
+
+.download-container {
+  position: relative;
 }

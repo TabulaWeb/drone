@@ -4,7 +4,8 @@ import OrderForm from '../components/OrderForm';
 import Reviews from '../components/Reviews';
 import Work from '../components/Work';
 import Services from '../components/Services';
-import Main from '../components/Main'
+import Main from '../components/Main';
+import Download from '../components/Download';
 
 const Home: NextPage = () => {
   return (
@@ -12,6 +13,7 @@ const Home: NextPage = () => {
       <Main />
       <Services />
       <Work />
+      <Download />
       <Reviews />
       <OrderForm />
     </>

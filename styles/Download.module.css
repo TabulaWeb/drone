@@ -1,0 +1,30 @@
+.download {
+    padding: 90px 0;
+    background: linear-gradient(180deg, #C0CEDA 0%, rgba(192, 206, 218, 0.37) 100%);
+}
+
+.downloadTextTitle {
+    font-family: 'Manrope';
+    font-weight: 800;
+    font-size: 45px;
+    line-height: 61px;
+    margin-bottom: 45px;
+    color: #FCF9F7;
+}
+
+.downloadTextLinks {
+    display: flex;
+    flex-direction: row;
+    gap: 0 20px;
+}
+
+.downloadText {
+    max-width: 520px;
+    margin-left: auto;
+}
+
+.downloadImage {
+    position: absolute;
+    left: 4%;
+    bottom: -93.5px;
+}
