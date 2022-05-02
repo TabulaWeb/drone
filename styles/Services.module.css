@@ -1,0 +1,19 @@
+.services {
+    background: #ECD8D0;
+    padding-top: 90px;
+    padding-bottom: 180px;
+    position: relative;
+}
+
+.servicesTitle {
+    font-weight: 800;
+    font-size: 45px;
+    line-height: 61px;
+    color: #322C2A;
+    margin-bottom: 45px;
+}
+
+.cloudBack {
+    position: absolute!important;
+    bottom: 0;
+}
