@@ -10,7 +10,7 @@ const OrderForm = () => {
     }
 
     return (
-        <section className='order'>
+        <section className='order' id='download'>
             <div className="container">
                 <div className="orderForm">
                     <h2 className={styles.orderFormTitle}>Оформить заявку онлайн</h2>

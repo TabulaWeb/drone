@@ -1,0 +1,24 @@
+.reviewsTitle {
+    font-family: 'Manrope';
+    font-weight: 800;
+    font-size: 45px;
+    line-height: 61px;
+    color: #322C2A;
+    margin-bottom: 45px;
+}
+
+.reviewsSlider {
+    margin-bottom: 90px;
+}
+
+.quotesBlock {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 25px 0;
+}
+
+.partners {
+    display: flex;
+    justify-content: space-between;
+}

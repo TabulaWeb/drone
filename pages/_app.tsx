@@ -12,6 +12,10 @@ const MyApp = ({ Component, pageProps }: AppProps) => {
           href="https://fonts.googleapis.com/css2?family=Manrope:wght@500;800&display=swap"
           rel="stylesheet" 
         />
+        <link
+          rel="stylesheet"
+          href="https://unpkg.com/swiper@8/swiper-bundle.min.css"
+        />
       </Head>
       <Layout>
         <Component {...pageProps} />
