@@ -194,7 +194,6 @@ a {
 /* Main */
 .main {
   padding-top: 190px;
-  padding-bottom: 90px;
   background-image: url('../public/backgroundMain.png');
   background-repeat: no-repeat;
   background-position-x: center;
@@ -202,7 +201,7 @@ a {
 }
 
 .main-title {
-  padding-bottom: 135px;
+  padding-bottom: 45px;
   position: relative;
 }
 
@@ -323,4 +322,9 @@ a {
 
 .main-why__video {
   max-width: 250px;
+}
+
+.main-why{
+  padding-top: 90px;
+  padding-bottom: 90px;
 }

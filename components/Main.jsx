@@ -34,7 +34,7 @@ const Main = () => {
                     </div>
                 </div>
 
-                <div className="main-why">
+                <div className="main-why" id='why'>
                     <h2 className='main-why__title'>Почему Lintu</h2>
                     <div className="main-why__content">
                         <div className="main-why__content-text">
@@ -45,10 +45,7 @@ const Main = () => {
                             </div>
 
                             <div className="main-why__video">
-                                <video
-                                    className="video"
-                                    src="https://www.youtube.com/watch?v=g1eKfEIQ2oc"
-                                ></video>
+                                
                                 <p>Посмотрите на полет нового дрона-доставщика от Lintu </p>
                             </div>
                         </div>
