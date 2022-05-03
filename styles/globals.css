@@ -496,3 +496,27 @@ a {
   left: 0;
   z-index: 10;
 }
+
+.customPlayer {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin-bottom: 15px;
+  width: 250px;
+  height: 135px;
+}
+
+video {
+  height: 135px;
+  border-radius: 25px;
+}
+
+.controlsContainer {
+  position: absolute;
+}
+
+.controlsIcon--small {
+  cursor: pointer;
+}

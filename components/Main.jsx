@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import { useRef } from "react";
 
 import styles from '../styles/Main.module.css';
 import Image from 'next/image';
@@ -7,9 +8,12 @@ import cloudOne from '../public/cloudOne.png';
 import cloudTwo from '../public/cloudTwo.png';
 import cloudThree from '../public/cloud3.png';
 import cloudFour from '../public/cloud4.png';
+import play from '../public/play.png';
 
 const Main = () => {
     const [scrollY, setScrollY] = useState(0);
+    const [playing, setPlaying] = useState(false);
+    const videoRef = useRef(null);
 
     useEffect(() => {
         const handleScroll = () => {
@@ -26,6 +30,16 @@ const Main = () => {
             window.removeEventListener("scroll", handleScroll);
         };
     }, []);
+
+    const videoHandler = (control) => {
+        if (control === "play") {
+            videoRef.current.play();
+            setPlaying(true);
+        } else if (control === "pause") {
+            videoRef.current.pause();
+            setPlaying(false);
+        }
+    };
 
     return(
         <section className='main'>
@@ -77,7 +91,26 @@ const Main = () => {
                             </div>
 
                             <div className="main-why__video">
-                                <div className="player"></div>
+                                <div className="customPlayer">
+                                    <video
+                                        ref={videoRef}
+                                        className="video"
+                                        src="./drone.mp4"
+                                        poster='./poster.png'
+                                        onClick={() => videoHandler("pause")}
+                                    >
+                                    </video>
+                                    <div className="controlsContainer">
+                                        <div className="controls">
+                                            {playing ? (
+                                                null
+                                            ) : (
+                                                <img onClick={() => videoHandler("play")} className="controlsIcon--small" alt="play" src='./play.png' />
+                                            )}
+                                            
+                                        </div>
+                                    </div>
+                                </div>
                                 <p>Посмотрите на полет нового дрона-доставщика от Lintu </p>
                             </div>
                         </div>
