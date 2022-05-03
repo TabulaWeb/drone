@@ -35,7 +35,14 @@ const Main = () => {
                     <h1>Доставка посылок при помощи дронов</h1>
                     <p>Попробуйте инновационную доставку. Выберите удобное время, и наш дрон привезет посылку на Ваш адрес в течение часа</p>
                     <button>Оформить заявку</button>
-                    <div className={scrollY >= 300 ? 'droneAnimation active' : 'droneAnimation'}>
+                    <div className={
+                            scrollY >= 300 && scrollY < 1144 ? 
+                                'droneAnimation active' 
+                                : scrollY >= 1144 ?
+                                'droneAnimation deactive'
+                                :
+                                'droneAnimation'
+                            }>
                         <Image src={droneAnimation} alt='drone animation'/>
                     </div>
                     <div className={scrollY >= 300 ? 'buttonArrow active' : 'buttonArrow'}>
@@ -70,7 +77,7 @@ const Main = () => {
                             </div>
 
                             <div className="main-why__video">
-                                
+                                <div className="player"></div>
                                 <p>Посмотрите на полет нового дрона-доставщика от Lintu </p>
                             </div>
                         </div>
