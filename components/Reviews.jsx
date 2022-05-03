@@ -2,6 +2,7 @@ import React from "react";
 // import Swiper core and required modules
 import { Navigation, Pagination, Scrollbar, A11y } from 'swiper';
 import { Swiper, SwiperSlide } from 'swiper/react';
+import { useSwiper } from 'swiper/react';
 import styles from '../styles/Reviews.module.css';
 import Image from "next/image";
 
@@ -21,6 +22,8 @@ import 'swiper/css/pagination';
 import 'swiper/css/scrollbar';
 
 const Reviews = () => {
+    const swiper = useSwiper();
+
     return (
         <section className="reviews" id="reviews">
             <div className="container">
@@ -28,12 +31,13 @@ const Reviews = () => {
 
                 <div className={styles.reviewsSlider}>
                     <div className="carousel-container">
+                        {/* <button onClick={() => swiper.slidePrev()}>Slide to the prev slide</button> */}
                         <Swiper
                             // install Swiper modules
                             modules={[Navigation, Pagination, Scrollbar, A11y]}
                             spaceBetween={20}
                             slidesPerView={3}
-                            navigation
+                            navigation={true}
                         >
                             <SwiperSlide>
                                 <div className={styles.quotesBlock}>
@@ -80,6 +84,7 @@ const Reviews = () => {
                                 </div>
                             </SwiperSlide>
                         </Swiper>
+                        <button onClick={() => swiper.slideNext()}>Slide to the next slide</button>
                     </div>
                 </div>
 
