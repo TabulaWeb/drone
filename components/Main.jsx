@@ -29,7 +29,7 @@ const Main = () => {
 
     return(
         <section className='main'>
-            <p className="scrollPosition">{scrollY}</p>
+            {/* <p className="scrollPosition">{scrollY}</p> */}
             <div className="container">
                 <div className="main-title">
                     <h1>Доставка посылок при помощи дронов</h1>
