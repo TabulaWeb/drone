@@ -1,3 +1,5 @@
+import { useEffect, useState } from "react";
+
 import styles from '../styles/Main.module.css';
 import Image from 'next/image';
 import droneAnimation from '../public/droneAnimation.png'
@@ -7,26 +9,47 @@ import cloudThree from '../public/cloud3.png';
 import cloudFour from '../public/cloud4.png';
 
 const Main = () => {
+    const [scrollY, setScrollY] = useState(0);
+
+    useEffect(() => {
+        const handleScroll = () => {
+            setScrollY(window.scrollY);
+        };
+
+        // just trigger this so that the initial state 
+        // is updated as soon as the component is mounted
+        // related: https://stackoverflow.com/a/63408216
+        handleScroll();
+
+        window.addEventListener("scroll", handleScroll);
+        return () => {
+            window.removeEventListener("scroll", handleScroll);
+        };
+    }, []);
+
     return(
         <section className='main'>
+            <p className="scrollPosition">{scrollY}</p>
             <div className="container">
                 <div className="main-title">
                     <h1>Доставка посылок при помощи дронов</h1>
                     <p>Попробуйте инновационную доставку. Выберите удобное время, и наш дрон привезет посылку на Ваш адрес в течение часа</p>
                     <button>Оформить заявку</button>
-                    <div className="droneAnimation">
+                    <div className={scrollY >= 300 ? 'droneAnimation active' : 'droneAnimation'}>
                         <Image src={droneAnimation} alt='drone animation'/>
                     </div>
-                    <div className="buttonArrow">
-                    <svg width="36" height="50" viewBox="0 0 36 50" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M17.1408 0.185806C16.506 0.410416 15.9982 0.8694 15.6955 1.51393L15.4611 2.00221V21.6018C15.4611 32.3928 15.4513 41.2112 15.4318 41.2112C15.422 41.2112 12.9318 38.7307 9.90444 35.7034C6.25209 32.051 4.24037 30.1077 3.94741 29.9514C2.64858 29.2483 1.10561 29.7561 0.43178 31.094C0.138812 31.6897 0.129046 32.6467 0.412249 33.2327C0.548968 33.5159 3.08803 36.1135 8.64467 41.6702C16.4572 49.4729 16.7013 49.6975 17.2091 49.844C17.922 50.0491 18.2736 50.0393 18.9474 49.7952C19.4845 49.5999 19.8947 49.2092 27.4435 41.6604C36.1447 32.969 35.8029 33.3694 35.8029 32.178C35.8029 30.3518 34.0451 29.1702 32.3068 29.8245C31.8771 29.9807 31.1251 30.6936 26.1837 35.6253L20.5392 41.2503L20.5197 21.5335L20.4904 1.8069L20.2755 1.40651C19.9728 0.830338 19.3673 0.332291 18.7716 0.156509C18.1173 -0.0388031 17.7853 -0.0388031 17.1408 0.185806Z" fill="url(#paint0_linear_608_336)"/>
-                        <defs>
-                        <linearGradient id="paint0_linear_608_336" x1="18.0052" y1="49.9888" x2="18.0052" y2="0.0134926" gradientUnits="userSpaceOnUse">
-                        <stop stopColor="#ECD8D0"/>
-                        <stop offset="1" stopColor="#B4ABB0"/>
-                        </linearGradient>
-                        </defs>
-                    </svg>
+                    <div className={scrollY >= 300 ? 'buttonArrow active' : 'buttonArrow'}>
+                        <a href="#why">
+                            <svg width="36" height="50" viewBox="0 0 36 50" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M17.1408 0.185806C16.506 0.410416 15.9982 0.8694 15.6955 1.51393L15.4611 2.00221V21.6018C15.4611 32.3928 15.4513 41.2112 15.4318 41.2112C15.422 41.2112 12.9318 38.7307 9.90444 35.7034C6.25209 32.051 4.24037 30.1077 3.94741 29.9514C2.64858 29.2483 1.10561 29.7561 0.43178 31.094C0.138812 31.6897 0.129046 32.6467 0.412249 33.2327C0.548968 33.5159 3.08803 36.1135 8.64467 41.6702C16.4572 49.4729 16.7013 49.6975 17.2091 49.844C17.922 50.0491 18.2736 50.0393 18.9474 49.7952C19.4845 49.5999 19.8947 49.2092 27.4435 41.6604C36.1447 32.969 35.8029 33.3694 35.8029 32.178C35.8029 30.3518 34.0451 29.1702 32.3068 29.8245C31.8771 29.9807 31.1251 30.6936 26.1837 35.6253L20.5392 41.2503L20.5197 21.5335L20.4904 1.8069L20.2755 1.40651C19.9728 0.830338 19.3673 0.332291 18.7716 0.156509C18.1173 -0.0388031 17.7853 -0.0388031 17.1408 0.185806Z" fill="url(#paint0_linear_608_336)"/>
+                                <defs>
+                                <linearGradient id="paint0_linear_608_336" x1="18.0052" y1="49.9888" x2="18.0052" y2="0.0134926" gradientUnits="userSpaceOnUse">
+                                <stop stopColor="#ECD8D0"/>
+                                <stop offset="1" stopColor="#B4ABB0"/>
+                                </linearGradient>
+                                </defs>
+                            </svg>
+                        </a>
                     </div>
                     <div className="cloudOne">
                         <Image src={cloudOne} alt='clud one' />

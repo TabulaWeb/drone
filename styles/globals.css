@@ -419,3 +419,9 @@ a {
   -moz-animation: animCloud 13s ease-in-out infinite;
   animation: animCloud 13s ease-in-out infinite;
 }
+
+.scrollPosition {
+  position: fixed;
+  top: 0;
+  left: 0;
+}
