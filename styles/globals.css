@@ -273,12 +273,23 @@ a {
   position: absolute;
   bottom: 100px;
   left: -60%;
+
+  -webkit-user-select: none; 
+  -moz-user-select: none;   
+  -ms-user-select: none;
+  user-select: none;	
+  pointer-events: none;
 }
 
 .cloudTwo {
   position: absolute;
   top: 0;
   right: -50%;
+  -webkit-user-select: none; 
+  -moz-user-select: none;   
+  -ms-user-select: none;
+  user-select: none;	
+  pointer-events: none;
 }
 
 .main-why__text {
@@ -328,8 +339,83 @@ a {
 .main-why{
   padding-top: 90px;
   padding-bottom: 90px;
+  position: relative;
 }
 
 .download-container {
   position: relative;
+}
+
+.cloudThree {
+  position: absolute;
+  bottom: 50px;
+  left: -65%;
+
+  -webkit-user-select: none; 
+  -moz-user-select: none;   
+  -ms-user-select: none;
+  user-select: none;	
+  pointer-events: none;
+}
+
+.cloudFour {
+  position: absolute;
+  bottom: -30%;
+  right: -23%;
+  z-index: 1;
+
+  -webkit-user-select: none; 
+  -moz-user-select: none;   
+  -ms-user-select: none;
+  user-select: none;	
+  pointer-events: none;
+}
+
+
+@keyframes animCloud {
+  0% {
+      -webkit-transform: translate(-3%, -2%);
+      -moz-transform: translate(-3%, -2%);
+      -ms-transform: translate(-3%, -2%);
+      -o-transform: translate(-3%, -2%);
+      transform: translate(-3%, -2%);
+}
+  50% {
+      -webkit-transform: translate(3%, 2%);
+      -moz-transform: translate(3%, 2%);
+      -ms-transform: translate(3%, 2%);
+      -o-transform: translate(3%, 2%);
+      transform: translate(3%, 2%);
+}
+  100% {
+      -webkit-transform: translate(-3%, -2%);
+      -moz-transform: translate(-3%, -2%);
+      -ms-transform: translate(-3%, -2%);
+      -o-transform: translate(-3%, -2%);
+      transform: translate(-3%, -2%);
+  }
+}
+
+.cloudOne {
+  -webkit-animation: animCloud 15s ease-in-out infinite;
+  -moz-animation: animCloud 15s ease-in-out infinite;
+  animation: animCloud 15s ease-in-out infinite;
+}
+
+.cloudTwo {
+  -webkit-animation: animCloud 13s ease-in-out infinite;
+  -moz-animation: animCloud 13s ease-in-out infinite;
+  animation: animCloud 13s ease-in-out infinite;
+}
+
+.cloudThree {
+  -webkit-animation: animCloud 15s ease-in-out infinite;
+  -moz-animation: animCloud 15s ease-in-out infinite;
+  animation: animCloud 15s ease-in-out infinite;
+}
+
+.cloudFour {
+  -webkit-animation: animCloud 13s ease-in-out infinite;
+  -moz-animation: animCloud 13s ease-in-out infinite;
+  animation: animCloud 13s ease-in-out infinite;
 }

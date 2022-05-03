@@ -3,6 +3,8 @@ import Image from 'next/image';
 import droneAnimation from '../public/droneAnimation.png'
 import cloudOne from '../public/cloudOne.png';
 import cloudTwo from '../public/cloudTwo.png';
+import cloudThree from '../public/cloud3.png';
+import cloudFour from '../public/cloud4.png';
 
 const Main = () => {
     return(
@@ -99,6 +101,12 @@ const Main = () => {
                                 <p>Отслеживание доставки через приложение</p>
                             </div>
                         </div>
+                    </div>
+                    <div className="cloudThree">
+                        <Image src={cloudThree} alt='cloud four' />
+                    </div>
+                    <div className="cloudFour">
+                        <Image src={cloudFour} alt='cloud three' />
                     </div>
                 </div>
             </div>
